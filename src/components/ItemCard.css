@@ -1,14 +1,15 @@
 .card-max {
-    width: 250px;
+    width: 300px;
     height: 400px;
-    border: 1px solid #c9cbcc;
+    border: 1px solid #ebedee;
     border-radius: 6px;
     display: flex;
     flex-direction: column;
+    justify-self: center;
 }
 
 .item-photo {
-    width: 250px;
+    width: 300px;
     height: 275px;
     border-top-right-radius: 6px;
     border-top-left-radius: 6px;
@@ -50,5 +51,8 @@
 .item-details-container {
     background-image: linear-gradient(45deg,#f8f6e8, #e8f5e9);
     height: 100;
-    padding: 10px 0px 0px;
+    padding: 10px 0px 10px;
+    border-bottom-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+    padding-left: 8px;
 }

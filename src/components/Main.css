@@ -1,0 +1,5 @@
+.item-card-grid {
+    display: grid;
+    grid-template-columns: 300px 1fr 300px;
+    margin: 0px 24px
+}

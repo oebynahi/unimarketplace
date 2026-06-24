@@ -7,7 +7,7 @@
 }
 
 .search-bar {
-    width: 80%;
+    width: 88%;
     border-radius: 6px;
     border: 1px solid #eef0f1;
     height: 36px;
@@ -51,7 +51,7 @@
 
 h4 {
     font-family: "Inter", sans-serif;
-    font-size: 24pt;
+    font-size: 22pt;
     font-weight: 700;
 }
 
