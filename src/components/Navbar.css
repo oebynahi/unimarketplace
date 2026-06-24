@@ -1,6 +1,6 @@
 .logo-text {
     font-size: 26px;
-    color:green;
+    color:#2d5f3f;
     font-family: 'Inter', sans-serif;
 }
 
@@ -31,7 +31,7 @@
 }
 
 .button {
-    background-color: green;
+    background-color: #2d5f3f;
     border-radius: 6px;
     border: 0;
     padding: 8px;
