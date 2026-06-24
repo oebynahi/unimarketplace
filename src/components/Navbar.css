@@ -1,0 +1,72 @@
+.logo-text {
+    font-size: 26px;
+    color:green;
+    font-family: 'Inter', sans-serif;
+}
+
+.navbar {
+    display:flex;
+    flex-direction: row;
+    height: 40px;
+    width: 1;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+    padding: 8px 16px;
+    background-color: white;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+.category-page-text {
+    font-size: 16px;
+    color: grey;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+}
+
+.profile-logo {
+    height: 35px;
+    width: auto;
+}
+
+.button {
+    background-color: green;
+    border-radius: 6px;
+    border: 0;
+    padding: 8px;
+    color: white;
+    font-size: 14px;
+    font-weight: 550;
+    height: 32px;
+    font-family: 'Inter', sans-serif;
+}
+
+.navbar > div {
+    display: flex;
+    flex-direction: row;
+}
+
+.navbar-left-cluster {
+    width: 33%;
+    justify-self: left;
+}
+
+.navbar-middle-cluster {
+    width: 33%;
+    /*gap: 30px;*/
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-right-cluster {
+    width: 33%;
+    gap: 10px;
+    justify-self: right;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: center;
+}
