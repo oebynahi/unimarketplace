@@ -1,0 +1,54 @@
+.card-max {
+    width: 250px;
+    height: 400px;
+    border: 1px solid #c9cbcc;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+}
+
+.item-photo {
+    width: 250px;
+    height: 275px;
+    border-top-right-radius: 6px;
+    border-top-left-radius: 6px;
+}
+
+.title {
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: #2d5e3e;
+    margin:0;
+    text-align: left;
+}
+
+.price-text {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #2fe06d ;
+    text-align: left;
+
+}
+
+.author-username {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 550;
+    text-align: left;
+}
+
+.distance-to {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 550;
+    color: #2d5e3e;
+    text-align: left;
+}
+
+.item-details-container {
+    background-image: linear-gradient(45deg,#f8f6e8, #e8f5e9);
+    height: 100;
+    padding: 10px 0px 0px;
+}
