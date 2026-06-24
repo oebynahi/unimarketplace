@@ -16,6 +16,15 @@ export default function SearchForm () {
                 <button className='category-button'>Misc.</button>
             </div>
 
+            <div className='item-header'>
+                <h4>Today's Picks</h4>
+                <select className='sort-dropdown'>
+                    <option value="recent">Recently posted</option>
+                    <option value="p-asc">Price: Low to high</option>
+                    <option value="p-desc">Price: Hight to low</option>
+                </select>
+            </div>
+
         </div>
     )
 }

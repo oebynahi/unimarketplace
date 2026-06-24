@@ -46,5 +46,27 @@
 }
 
 .search-form-max {
-    margin: 24px 12px 8px; ;
+    margin: 24px 20px 8px; ;
+}
+
+h4 {
+    font-family: "Inter", sans-serif;
+    font-size: 24pt;
+    font-weight: 700;
+}
+
+.item-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sort-dropdown {
+    height: 36px;
+    border-radius: 6px;
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    border: 1px solid #eef0f1;
 }
