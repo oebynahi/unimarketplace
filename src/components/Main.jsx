@@ -10,6 +10,8 @@ export default function Main () {
                 <ItemCard />
                 <ItemCard />
                 <ItemCard />
+                <ItemCard />
+                <ItemCard />
             </div>
         </>
     )
