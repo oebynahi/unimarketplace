@@ -13,7 +13,7 @@ export default function SearchForm () {
                 <button className='category-button'>Clothing</button>
                 <button className='category-button'>Housing</button>
                 <button className='category-button'>Food</button>
-                <button className='category-button'>Misc.</button>
+                <button className='category-button'>Books</button>
             </div>
 
             <div className='item-header'>

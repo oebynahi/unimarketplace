@@ -5,7 +5,7 @@ export default function Login() {
         <>
             <div className="login-form-max">
 
-                <form action="login">
+                <form className='login-form' action="login">
                     <h1>Welcome back</h1>
                     <p className='subhead'>Sign in to your 1DE account</p>
 
@@ -19,13 +19,13 @@ export default function Login() {
 
                     <br />
 
-                    <button type="submit">Login</button>
+                    <button className='login-option-button' type="submit">Login</button>
 
                     <h3>Or</h3>
 
                     {/* Oauth Login */}
 
-                    <button type="submit">Login it with Google</button>
+                    <button className='login-option-button' type="submit">Login it with Google</button>
                 </form>
 
                 <p>Don't have an account? <a href="">Sign up</a></p>
