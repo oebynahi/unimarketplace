@@ -8,7 +8,7 @@ import MyListings from './pages/mylistings'
 import './App.css'
 
 function App() {
-  const [loginCookie, setLoginCookie] = React.useState(true)
+  const [loginCookie, setLoginCookie] = React.useState(false)
   
   return(
         (loginCookie) ? <BrowsePage /> : <Login /> 

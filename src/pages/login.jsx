@@ -1,11 +1,33 @@
+import {supabase} from '../../supabaseClient.js'
 import './login.css'
 import Footer from '../components/footer'
 export default function Login() {
+    
+    async function handleSumbit (formData) {
+        // const email = formData.get("email")
+        // const password = formData.get("password")
+
+        const {data, error} = await supabase.auth.signInWithPassword({
+            email: formData.get("email"),
+            password: formData.get("password")
+        })
+
+        if (error) {
+            console.error(error)
+            return <h1>Error!</h1>
+        }
+
+        return(
+            <h1>Welcome back</h1>
+        )
+    }
+
+    
     return (
         <>
             <div className="login-form-max">
 
-                <form className='login-form' action="login">
+                <form className='login-form' action={handleSumbit}>
                     <h1>Welcome back</h1>
                     <p className='subhead'>Sign in to your 1DE account</p>
 
@@ -15,7 +37,7 @@ export default function Login() {
                     <br />
 
                     <label htmlFor="passwordBox">Password</label>
-                    <input type="text" id="emailBox" placeholder='Enter your password' name='password' aria-label='password'/>
+                    <input type="password" id="emailBox" placeholder='Enter your password' name='password' aria-label='password'/>
 
                     <br />
 
@@ -26,7 +48,9 @@ export default function Login() {
                     {/* Oauth Login */}
 
                     <button className='login-option-button' type="submit">Login it with Google</button>
+                
                 </form>
+
 
                 <p>Don't have an account? <a href="">Sign up</a></p>
 
