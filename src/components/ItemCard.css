@@ -1,6 +1,6 @@
 .card-max {
-    width: 300px;
-    height: 400px;
+    width: 175px;
+    height: 250px;
     border: 1px solid #ebedee;
     border-radius: 6px;
     display: flex;
@@ -10,50 +10,60 @@
 }
 
 .item-photo {
-    width: 300px;
-    height: 275px;
+    width: 175px;
+    height: 167.5px;
     border-top-right-radius: 6px;
     border-top-left-radius: 6px;
 }
 
 .title {
     font-family: 'Inter', sans-serif;
-    font-size: 18px;
+    font-size: 12px;
     font-weight: 600;
     color: #2d5e3e;
-    margin:0;
+    margin:0px;
+    padding: 0px;
     text-align: left;
+    height: 18px;
 }
 
 .price-text {
     font-family: 'Inter', sans-serif;
-    font-size: 14px;
+    font-size: 10px;
     font-weight: 600;
     color: #2fe06d ;
     text-align: left;
-
+    margin: 0px;
+    padding: 0px;
+    height: 18px;
 }
 
 .author-username {
     font-family: 'Inter', sans-serif;
-    font-size: 14px;
+    font-size: 10px;
     font-weight: 550;
     text-align: left;
+    margin: 0px;
+    padding: 0px;
+    height: 18px;
 }
 
 .distance-to {
     font-family: 'Inter', sans-serif;
-    font-size: 14px;
+    font-size: 10px;
     font-weight: 550;
     color: #2d5e3e;
     text-align: left;
+    margin: 0px;
+    padding: 0px;
+    height: 18px;
 }
 
 .item-details-container {
     background-image: linear-gradient(45deg,#f8f6e8, #e8f5e9);
-    height: 100;
-    padding: 10px 0px 10px;
+    height: 82.5px;
     border-bottom-right-radius: 6px;
     border-bottom-left-radius: 6px;
-    padding-left: 8px;
+    display: flex;
+    flex-direction: column;
 }
