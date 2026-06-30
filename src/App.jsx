@@ -5,14 +5,16 @@ import heroImg from './assets/hero.png'
 import BrowsePage from './pages/browse'
 import Login from './pages/login'
 import MyListings from './pages/mylistings'
+import Signup from './pages/signup'
 import './App.css'
 
 function App() {
   const [loginCookie, setLoginCookie] = React.useState(false)
   
   return(
-        (loginCookie) ? <BrowsePage /> : <Login /> 
+        // (loginCookie) ? <BrowsePage /> : <Login /> 
     // <MyListings />
+    <Signup />
 
   )
 }
