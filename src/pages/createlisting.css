@@ -1,0 +1,33 @@
+.listing-details {
+    display: flex;
+    flex-direction: row;
+    margin: 36px 36px;
+    height: 100vh;
+    justify-content: center;
+}
+
+.listing-desc-box {
+    display: flex;
+    flex-direction: column;
+    margin: 0px 24px;
+    height: 500px;
+    gap: 30px;
+}
+
+.file-importer {
+    width: 600px;
+    height: 500px;
+}
+
+.text-description-box {
+    border-radius: 12px;
+    font-family: "Inter", sans-serif;
+    font-size: 12pt;
+    padding: 4px;
+    height: 218px;
+    border: 1px solid #53af75;
+}
+
+.listing-desc-box > input textarea {
+    width: 100%;
+}
