@@ -7,15 +7,24 @@ import Login from './pages/login'
 import MyListings from './pages/mylistings'
 import Signup from './pages/signup'
 import './App.css'
+import { BrowserRouter, Routes, Route, Link, Outlet, Navigate} from 'react-router-dom'
 
 function App() {
   const [loginCookie, setLoginCookie] = React.useState(false)
+
+  function handleLogin () {
+    setLoginCookie((prevCookie) => !prevCookie)
+  }
   
   return(
-        // (loginCookie) ? <BrowsePage /> : <Login /> 
-    // <MyListings />
-    <Signup />
-
+    <BrowserRouter>
+      
+      <Routes>
+        <Route path="/" element={loginCookie ? <BrowsePage /> : <Signup />} />
+        <Route path="/login-page" element={<Login/>} />
+        <Route path="/sign-up" element={<Signup />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 

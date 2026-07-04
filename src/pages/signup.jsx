@@ -1,6 +1,7 @@
 import {supabase} from '../../supabaseClient.js'
 import './signup.css'
 import Footer from '../components/footer'
+import { BrowserRouter, Routes, Route, Link} from 'react-router-dom'
 
 
 export default function Signup() {
@@ -75,7 +76,7 @@ export default function Signup() {
                 </form>
 
 
-                <p>Already have an account? <a href="">login</a></p>
+                <p>Already have an account? <Link to="/login-page">Login</Link></p>
 
             </div>
 

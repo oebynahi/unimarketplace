@@ -1,6 +1,8 @@
 import {supabase} from '../../supabaseClient.js'
 import './login.css'
 import Footer from '../components/footer'
+import { BrowserRouter, Routes, Route, Link} from 'react-router-dom'
+
 export default function Login() {
     
     async function handleSumbit (formData) {
@@ -52,7 +54,7 @@ export default function Login() {
                 </form>
 
 
-                <p>Don't have an account? <a href="">Sign up</a></p>
+                <p>Don't have an account? <Link to="/sign-up">Sign up </Link></p>
 
             </div>
 
