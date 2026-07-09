@@ -1,28 +1,9 @@
-import {supabase} from '../../supabaseClient.js'
 import './login.css'
 import Footer from '../components/footer'
 import { BrowserRouter, Routes, Route, Link} from 'react-router-dom'
 
 export default function Login() {
     
-    async function handleSumbit (formData) {
-        // const email = formData.get("email")
-        // const password = formData.get("password")
-
-        const {data, error} = await supabase.auth.signInWithPassword({
-            email: formData.get("email"),
-            password: formData.get("password")
-        })
-
-        if (error) {
-            console.error(error)
-            return <h1>Error!</h1>
-        }
-
-        return(
-            <h1>Welcome back</h1>
-        )
-    }
 
     
     return (

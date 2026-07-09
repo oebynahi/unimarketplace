@@ -11,22 +11,23 @@ import './App.css'
 import { BrowserRouter, Routes, Route, Link, Outlet, Navigate} from 'react-router-dom'
 
 function App() {
-  const [loginCookie, setLoginCookie] = React.useState(false)
+  const [loginCookie, setLoginCookie] = React.useState(true)
 
   function handleLogin () {
     setLoginCookie((prevCookie) => !prevCookie)
   }
   
   return(
-    <CreateListing />
-    // <BrowserRouter>
+    <BrowserRouter>
       
-    //   <Routes>
-    //     <Route path="/" element={loginCookie ? <BrowsePage /> : <Signup />} />
-    //     <Route path="/login-page" element={<Login/>} />
-    //     <Route path="/sign-up" element={<Signup />} />
-    //   </Routes>
-    // </BrowserRouter>
+      <Routes>
+        <Route path="/" element={loginCookie ? <BrowsePage /> : <Signup />} />
+        <Route path="/login-page" element={<Login/>} />
+        <Route path="/sign-up" element={<Signup />} />
+        <Route path='/create-listing' element={<CreateListing />}/>
+        <Route path='/my-listings' element={<MyListings />}/>
+      </Routes>
+    </BrowserRouter>
   )
 }
 

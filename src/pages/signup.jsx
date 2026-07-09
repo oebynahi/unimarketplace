@@ -1,4 +1,3 @@
-import {supabase} from '../../supabaseClient.js'
 import './signup.css'
 import Footer from '../components/footer'
 import { BrowserRouter, Routes, Route, Link} from 'react-router-dom'
@@ -6,39 +5,6 @@ import { BrowserRouter, Routes, Route, Link} from 'react-router-dom'
 
 export default function Signup() {
     
-    async function handleSumbit (formData) {
-        // const email = formData.get("email")
-        // const password = formData.get("password")
-
-        const {data, error} = await supabase.auth.signUp({
-            email: formData.get("email"),
-            password: formData.get("password"),
-            options : {
-                display_name: `${formData.get("first_name")} ${formData.get("last_name")}`
-            }
-        })
-
-        if (error) {
-            console.error(error)
-            return <h1>Error!</h1>
-        }
-
-        const {error2} = await supabase.from('users').insert({
-            first_name: formData.get("first_name"),
-            last_name: formData.get("last_name"),
-            email : formData.get("email")
-        })
-
-        if (error2) {
-            console.error(error2)
-            return <h1>Error!</h1>
-        }
-
-        return(
-            <h1>Welcome back</h1>
-        )
-    }
-
     
     return (
         <>

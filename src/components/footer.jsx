@@ -1,4 +1,5 @@
 import './footer.css'
+import { BrowserRouter, Routes, Route, Link, Outlet, Navigate} from 'react-router-dom'
 
 export default function Footer() {
     return (
