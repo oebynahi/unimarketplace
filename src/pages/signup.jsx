@@ -1,11 +1,15 @@
 import './signup.css'
 import Footer from '../components/footer'
 import { BrowserRouter, Routes, Route, Link} from 'react-router-dom'
+import { useEffect } from 'react'
 
 
 export default function Signup() {
     
-    
+    // useEffect(function() {
+    //     fetch("/signup",)
+    // }, [])
+
     return (
         <>
             <div className="signup-form-max">
