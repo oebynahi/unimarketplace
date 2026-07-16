@@ -32,9 +32,10 @@ app.get("/api/browse-listings", async (req, res) => {
 
 
 ///2.) CREATE LISTING POST REQUEST
-app.post("/create-listing", async (req,res) => {
+app.post("/api/create-listing", async (req,res) => {
     try {
-        let result = await db.query("INSERT into listings VALUES ($1, $2, $3, $4, $5, $6)",[])
+        console.log(req.body)
+        let result = await db.query(`INSERT into listings (title, price, description, listerid, pickup_location, imagelink) VALUES ($1, $2, $3, $4, $5, $6)`,[req.body.itemTitle, req.body.itemPrice, req.body.itemDescription, 2, req.body.pickupAddress, "image"])
         console.log(result.rows)
         res.json(result.rows)
     } catch (error) {
