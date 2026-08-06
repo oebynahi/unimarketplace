@@ -4,17 +4,37 @@ import { BrowserRouter, Routes, Route, Link} from 'react-router-dom'
 import { useEffect } from 'react'
 
 
+
 export default function Signup() {
     
-    // useEffect(function() {
-    //     fetch("/signup",)
-    // }, [])
+    async function handleSubmit(event) {
+        event.preventDefault();
+        window.alert("EVENT HANDLER FIRED")
+        const form = event.target;
+
+        const formData = new FormData(form)
+
+        await fetch("/api/signup", {
+            method: "POST",
+            headers: {'Content-Type':'application/json'},
+            body: JSON.stringify({
+                firstName: formData.get("first_name"),
+                lastName: formData.get("last_name"),
+                email: formData.get("email"),
+                password: formData.get("password")
+                })
+            })
+            .then(response => response.json())
+            .then(data => console.log(data))
+    }
+
+
 
     return (
         <>
             <div className="signup-form-max">
 
-                <form className='signup-form' action={handleSumbit}>
+                <form className='signup-form' onSubmit={handleSubmit}>
                     <h1>Welcome!</h1>
                     <p className='subhead'>Create a 1DE account</p>
 
@@ -41,7 +61,7 @@ export default function Signup() {
 
                     {/* Oauth signup */}
 
-                    <button className='signup-option-button' type="submit">Continue with Google</button>
+                    <button className='signup-option-button' >Continue with Google</button> 
                 
                 </form>
 

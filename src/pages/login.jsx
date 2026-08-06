@@ -4,13 +4,30 @@ import { BrowserRouter, Routes, Route, Link} from 'react-router-dom'
 
 export default function Login() {
     
+    async function handleSubmit (event) {
+        window.alert("EVENT HANDLER FIRED")
+        const form = event.target
+        const formData = new FormData(form)
 
+        const payload = {
+            email: formData.get("email"),
+            password: formData.get("password")
+        }
+
+        await fetch("/api/login", {
+            method: "POST",
+            headers: {"Content-type": "applications/json"},
+            body: payload
+        })
+        .then(response => response.json())
+        .then(data => console.log(data))
+    }
     
     return (
         <>
             <div className="login-form-max">
 
-                <form className='login-form' action={handleSumbit}>
+                <form className='login-form' onClick={handleSubmit}>
                     <h1>Welcome back</h1>
                     <p className='subhead'>Sign in to your 1DE account</p>
 

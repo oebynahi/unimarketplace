@@ -21,7 +21,7 @@ function App() {
     <BrowserRouter>
       
       <Routes>
-        <Route path="/" element={loginCookie ? <BrowsePage /> : <Signup />} />
+        <Route path="/" element={/*loginCookie ? <BrowsePage /> : <Signup /> */ <Login/>} />
         <Route path="/login-page" element={<Login/>} />
         <Route path="/sign-up" element={<Signup />} />
         <Route path='/create-listing' element={<CreateListing />}/>
